@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -9,6 +10,12 @@ const Post = () => {
     let color = tinycolor(hex);
     return (
         <div className="flex flex-col items-center align-center font-mono">
+            <Head>
+        <title>{color.toHexString()}</title>
+        <meta name="description" content={`${color.toHexString()} on Ewan's Yellows`} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
         <h1 className="text-white text-4xl font-mono mb-8 mt-4 font-semibold">{"#" + hex}</h1>
         <div className="w-48 h-48 rounded-md mb-4" style={{backgroundColor: ("#" + hex)}}></div>
         <h1 className="text-white text-xl mb-2">Hex: {"#" + hex}</h1>

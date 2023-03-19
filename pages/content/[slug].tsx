@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 
 export interface Page {
@@ -10,6 +11,12 @@ export default function ColorPage(props: Page) {
     let color = tinycolor(props.hex);
     return (
         <div className="flex flex-col items-center align-center font-mono">
+            <Head>
+        <title>{props.name}</title>
+        <meta name="description" content={`${props.name} on Ewan's Yellows`} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
         <h1 className="text-white text-4xl font-mono mb-8 mt-4 font-semibold">{props.name}</h1>
         <div className="w-48 h-48 rounded-md mb-4" style={{backgroundColor: props.hex}}></div>
         <h1 className="text-white text-xl mb-2">Hex: {props.hex}</h1>
