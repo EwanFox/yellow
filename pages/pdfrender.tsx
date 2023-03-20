@@ -30,6 +30,7 @@ export default function Test() {
       for await (let chunk of buffer) {
         chunks.push(chunk);
       }
+      //@ts-ignore
       const rbuffer = Buffer.concat(chunks);
       // output the pdf buffer
       res.end(rbuffer);
