@@ -27,7 +27,7 @@ export default function Home(props: PageProps) {
         <h1 className='mb-4 mt-4'>
           Ewan&apos;s Yellows
         </h1>
-        <div className='grid lg:grid-cols-4 md:grid-cols-3'>
+        <div className='grid lg:grid-cols-5 md:grid-cols-3'>
           {props.posts.map((post) => {
             return (<div key={post.slug} className='bg-clip-border max-w-xs mx-4 mb-8 rounded-lg shadow-lg bg-slate-800 flex flex-col align-center items-center'>
               <div className={`-clip-border w-full h-36 ${`bg-[${post.hex}]`}`} style={{backgroundColor: post.hex}}></div>
