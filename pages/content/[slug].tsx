@@ -4,7 +4,8 @@ import Link from "next/link";
 export interface Page {
     name: string,
     slug: string,
-    hex: string
+    hex: string,
+    alias: string | undefined
   }
 export default function ColorPage(props: Page) {
     let tinycolor = require('tinycolor2')
@@ -19,6 +20,7 @@ export default function ColorPage(props: Page) {
       </Head>
         <h1 className="text-white text-4xl font-mono mb-8 mt-4 font-semibold">{props.name}</h1>
         <div className="w-48 h-48 rounded-md mb-4" style={{backgroundColor: props.hex}}></div>
+        <h1 className="text-white text-xl mb-2">Alias: {props.alias ?? "None"}</h1>
         <h1 className="text-white text-xl mb-2">Hex: {props.hex}</h1>
         <h1 className="text-white text-xl mb-2">RGB: {color.toRgbString()}</h1>
         <h1 className="text-white text-xl mb-2">HSL: {color.toHslString()}</h1>

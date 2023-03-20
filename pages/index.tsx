@@ -11,7 +11,8 @@ export interface PageProps {
 export interface Page {
   name: string,
   slug: string,
-  hex: string
+  hex: string,
+  alias: string | undefined
 }
 export default function Home(props: PageProps) {
   return (
