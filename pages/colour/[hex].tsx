@@ -9,7 +9,7 @@ const Post = () => {
   let tinycolor = require('tinycolor2')
     let color = tinycolor(hex);
     return (
-        <div className="flex flex-col items-center align-center font-mono">
+        <div className="flex flex-col items-center align-center font-mono break-normal">
             <Head>
         <title>{color.toHexString()}</title>
         <meta name="description" content={`${color.toHexString()} on Ewan's Yellows`} />

@@ -11,7 +11,7 @@ export default function ColorPage(props: Page) {
     let tinycolor = require('tinycolor2')
     let color = tinycolor(props.hex);
     return (
-        <div className="flex flex-col items-center align-center font-mono">
+        <div className="flex flex-col items-center align-center font-mono break-normal">
             <Head>
         <title>{props.name}</title>
         <meta name="description" content={`${props.name} on Ewan's Yellows`} />
