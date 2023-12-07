@@ -11,8 +11,8 @@ const Post = () => {
     return (
         <div className="flex flex-col items-center align-center font-mono break-normal">
             <Head>
-        <title>{color.toHexString()}</title>
-        <meta name="description" content={`${color.toHexString()} on Ewan's Yellows`} />
+        <title>#{router.query.hex as string}</title>
+        <meta name="description" content={`#${router.query.hex as string} on Ewan's Yellows`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
